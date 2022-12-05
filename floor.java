@@ -2,7 +2,7 @@ public class floor {
 
     public static void main(String[] args) {
         int[] nums = { 2, 3, 5, 9, 14, 16, 18 };
-        int target = 15;
+        int target = 4;
         int ans = ceiling(nums, target);
         System.out.println(ans);
     }
@@ -10,6 +10,10 @@ public class floor {
     static int ceiling(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
+
+        if (target > arr[arr.length - 1]) {
+            return -1;
+        }
 
         while (start <= end) {
 

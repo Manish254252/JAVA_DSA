@@ -13,6 +13,10 @@ public class ceiling {
 
         while (start <= end) {
 
+            if (target > arr[arr.length - 1]) {
+                return -1;
+            }
+
             int mid = start + (end - start) / 2;
 
             if (target < arr[mid]) {
